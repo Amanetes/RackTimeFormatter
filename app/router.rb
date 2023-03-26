@@ -9,7 +9,7 @@ class Router
     case @request.path_info
     when '/time'
       begin
-        formatted_time = TimeFormatter.new(@request.params).call
+        formatted_time = TimeFormatter.call(@request.params)
         [200, {}, [formatted_time]]
       rescue StandardError
         [400, {}, ['Bad Request']]
