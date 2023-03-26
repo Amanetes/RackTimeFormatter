@@ -23,3 +23,10 @@ GET /time?format=year%2Cmonth%2Cday%2Chour%2Cminute%2Csecond
 GET /date will return an error
 GET /time?format=invalid_format will return an error
 ```
+
+Curl example:
+
+```bash
+curl -i -X GET http://localhost:9292/time?format=year%2Cmonth%2Cday
+curl -i -X GET http://localhost:9292/time?format=year%2Cmonth%2Cday%2Chour%2Cminute%2Csecond
+```
